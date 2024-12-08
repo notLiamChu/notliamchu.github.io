@@ -5,14 +5,13 @@ const sass = require('gulp-sass');
 const wait = require('gulp-wait');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
-const concat = require('gulp-concat');  // New: To concatenate Flickity with other JS
-const path = require('path');
+const concat = require('gulp-concat');  // To concatenate Flickity with other JS
 
 // Modify the scripts task to include Flickity
 gulp.task('scripts', function() {
     return gulp.src([
-            './node_modules/flickity/dist/flickity.pkgd.min.js', // Include Flickity JS
-            './js/scripts.js'  // Your custom JS file
+            './node_modules/flickity/dist/flickity.pkgd.min.js',
+            './js/scripts.js'
         ])
         .pipe(plumber(plumber({
             errorHandler: function (err) {
@@ -28,19 +27,20 @@ gulp.task('scripts', function() {
                 comments: '/^!/'
             }
         }))
-        .pipe(concat('scripts.min.js'))  // Concatenate Flickity and your scripts
+        .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest('./js'));
 });
 
-// Add a styles task for Flickity CSS if you need it
+// Styles task: Include Flickity CSS and compile/rename SCSS
 gulp.task('styles', function () {
     return gulp.src([
-            './node_modules/flickity/dist/flickity.min.css', // Include Flickity CSS
-            './scss/styles.scss' // Your custom SCSS file
+            './node_modules/flickity/dist/flickity.min.css',
+            './scss/styles.scss'
         ])
         .pipe(wait(250))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(concat('styles.min.css'))  // Concatenate and rename to styles.min.css
+        .pipe(gulp.dest('./css'));  // Output the minified CSS
 });
 
 gulp.task('watch', function() {
