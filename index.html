@@ -133,43 +133,82 @@
 
     <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-12">
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification">
+                            <p class="title">Project title</p>
+                            <figure class="image is-3by2">
+                                <img class="modal-trigger" data-target="project-1-modal" src="images/project.jpg">
+                            </figure>
+                        </article>
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification">
+                            <p class="title">Project title</p>
+                            <figure class="image is-4by3">
+                                <img class="modal-trigger" data-target="project-2-modal" src="images/project.jpg">
+                            </figure>
+                        </article>
                     </div>
-                    <!-- End .project-info -->
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification">
+                            <p class="title">Project title</p>
+                            <figure class="image is-4by3">
+                                <img class="modal-trigger" data-target="project-3-modal" src="images/project.jpg">
+                            </figure>
+                        </article>
+                    </div>
                 </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
             </div>
         </div>
     </div>
     <!-- End #projects -->
+
+    <!-- Project Modals -->
+    <div id="project-1-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Scientific Computing</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="project-1-modal-carousel" class="carousel">
+                    <figure class="image is-4by3 carousel-cell">
+                        <img src="images/vorticity_animation_OppoChargePairs.gif">
+                    </figure>
+                    <figure class="image is-4by3 carousel-cell">
+                        <img src="images/vorticity_animation_Random.gif">
+                    </figure>
+                    <figure class="image is-4by3 carousel-cell">
+                        <img src="images/vorticity_animation_SameCharge.gif">
+                    </figure>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo
+                        consequat.
+                    </p>
+        
+                    <div class="tags">
+                        <span class="tag">angular</span>
+                        <span class="tag">mongo</span>
+                        <span class="tag">typscript</span>
+                        <span class="tag">node</span>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- End Project Modals -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
