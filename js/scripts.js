@@ -10,7 +10,7 @@
     portfolio website.
 */
 
-require('./styles.scss');
+require("../scss/styles.scss");
 
 var Flickity = require('flickity');
 require('flickity-imagesloaded');
