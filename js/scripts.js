@@ -71,6 +71,7 @@ function closeModals() {
 // Functions
 
 function initCarousel(id) {
+    console.log(`Initializing carousel for ${id}`);
     return new Flickity('#' + id, {
         imagesLoaded: true,
         adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
