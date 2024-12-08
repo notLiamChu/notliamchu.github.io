@@ -38,10 +38,13 @@ gulp.task('styles', function () {
             './scss/styles.scss'
         ])
         .pipe(wait(250))
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(concat('styles.min.css'))  // Concatenate and rename to styles.min.css
-        .pipe(gulp.dest('./css'));  // Output the minified CSS
+        .pipe(sass({
+            includePaths: ['./node_modules']
+        }).on('error', sass.logError))
+        .pipe(concat('styles.min.css'))
+        .pipe(gulp.dest('./css'));
 });
+
 
 gulp.task('watch', function() {
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
