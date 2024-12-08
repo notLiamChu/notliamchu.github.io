@@ -8501,6 +8501,12 @@ footer {
     ----- 9. Modal Styles -----
     -------------------------------
 */
+.carousel-cell {
+  width: 100%; }
+
+.section {
+  padding: 2.15rem 1.5rem; }
+
 .card-gap {
   margin-top: 1.75rem; }
 
@@ -8518,9 +8524,6 @@ a.icon > strong {
 
 .modal.is-active {
   display: block; }
-
-.carousel-cell {
-  width: 100%; }
 
 /*
     -------------------------------

@@ -703,8 +703,14 @@ footer {
     ----- 9. Modal Styles -----
     -------------------------------
 */
+$footer-padding: 3rem 1.5rem;
+$link: hsl(171, 100%, 41%);
 $spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
 $margin-default: map-get($spaces, "2") map-get($spaces, "0");
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+.carousel-cell {width:100%}
+.section {padding: 2.15rem 1.5rem}
 .card-gap {margin-top:1.75rem}
 .modal-trigger { cursor: pointer; }
 a.icon > strong {margin-left:.25rem}
@@ -717,9 +723,6 @@ a.icon > strong {margin-left:.25rem}
     display: block;
 }
 
-
-// Flickity
-.carousel-cell {width:100%}
 
 /*
     -------------------------------
