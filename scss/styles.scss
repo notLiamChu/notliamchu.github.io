@@ -703,6 +703,14 @@ $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 a.icon > strong {margin-left:.25rem}
 .modal-card-body div.content {margin:$margin-default}
 
+.modal {
+    display: none;
+}
+.modal.is-active {
+    display: block;
+}
+
+
 // Flickity
 .carousel-cell {width:100%}
 
