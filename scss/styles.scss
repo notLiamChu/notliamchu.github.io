@@ -21,11 +21,14 @@
         6. Experience Styles
         7. Education Styles
         8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Optional Section Styles
-        12. Media Queries
+        9. Modal Styles
+        10. Skills Styles
+        11. Contact Styles
+        12. Optional Section Styles
+        13. Media Queries
 */
+
+@import "~flickity/css/flickity.css";
 
 /*
     ------------------------
@@ -690,7 +693,22 @@ footer {
 
 /*
     -------------------------------
-    ----- 9. Skills Styles -----
+    ----- 9. Modal Styles -----
+    -------------------------------
+*/
+$spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
+$margin-default: map-get($spaces, "2") map-get($spaces, "0");
+.card-gap {margin-top:1.75rem}
+.modal-trigger { cursor: pointer; }
+a.icon > strong {margin-left:.25rem}
+.modal-card-body div.content {margin:$margin-default}
+
+// Flickity
+.carousel-cell {width:100%}
+
+/*
+    -------------------------------
+    ----- 10. Skills Styles -----
     -------------------------------
 */
 
@@ -724,7 +742,7 @@ footer {
 
 /*
     -------------------------------
-    ----- 10. Contact Styles -----
+    ----- 11. Contact Styles -----
     -------------------------------
 */
 
@@ -789,7 +807,7 @@ footer {
 
 /*
     ---------------------------------------
-    ----- 11. Optional Section Styles -----
+    ----- 12. Optional Section Styles -----
     ---------------------------------------
 */
 
@@ -837,7 +855,7 @@ footer {
 
 /*
     -----------------------------
-    ----- 12. Media Queries -----
+    ----- 13. Media Queries -----
     -----------------------------
 */
 
