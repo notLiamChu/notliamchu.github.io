@@ -23,6 +23,7 @@ var rootEl = document.documentElement;
 var $modals = getAll('.modal');
 var $modalTriggers = getAll('.modal-trigger');
 var $modalCloses = getAll('.modal-card-head .delete, .modal-card-foot .button');
+var gifs = document.querySelectorAll('.gif-reset'); // Target the GIFs
 
 if ($modalTriggers.length > 0) {
     $modalTriggers.forEach(function ($el) {
@@ -46,6 +47,13 @@ function openModal(target) {
     rootEl.classList.add('is-clipped');
     $target.classList.add('is-active');
     var carouselId = target + '-carousel';
+
+    // Reset GIFs when modal is opened
+    gifs.forEach(function(gif) {
+        let currentSrc = gif.src;
+        gif.src = '';
+        gif.src = currentSrc;
+    });
 
     if (document.querySelector('#' + carouselId)) {
         // Initialize each carousel one time only
