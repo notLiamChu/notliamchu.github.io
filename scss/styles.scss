@@ -697,6 +697,26 @@ $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 .carousel-cell {width:100%}
+.carousel .carousel-cell {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Ensure the height adjusts to content */
+}
+
+.carousel .image {
+    display: flex; /* Ensure content centers properly */
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .section {padding: 2.15rem 1.5rem}
 .card-gap {margin-top:1.75rem}
 .modal-trigger { cursor: pointer; }
