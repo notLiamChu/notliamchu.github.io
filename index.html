@@ -199,7 +199,20 @@
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <iframe src="isosurfaces/noisy_isosurface.html" width="100%" height="500px" frameborder="0"></iframe>
+                <div id="project-2-modal-carousel" class="carousel">
+                    <!-- First carousel cell with isosurface -->
+                    <figure class="image is-4by3 carousel-cell">
+                        <iframe src="isosurfaces/noisy_isosurface.html" 
+                                width="100%" height="500px" frameborder="0" 
+                                loading="lazy" allowfullscreen></iframe>
+                    </figure>
+                    <!-- Second carousel cell with isosurface -->
+                    <figure class="image is-4by3 carousel-cell">
+                        <iframe src="isosurfaces/signature_frequency_isosurface.html" 
+                                width="100%" height="500px" frameborder="0" 
+                                loading="lazy" allowfullscreen></iframe>
+                    </figure>
+                </div>
                 <div class="content">
                     <p>
                         Given an object's sonic emissions over 49 time steps in 3D space, I 
@@ -212,6 +225,7 @@
             </footer>
         </div>
     </div>
+    
 
     <!-- End Project Modals -->
 
