@@ -8476,6 +8476,19 @@ footer {
 .carousel-cell {
   width: 100%; }
 
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* 4:3 Aspect Ratio */ }
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .section {
   padding: 2.15rem 1.5rem; }
 
