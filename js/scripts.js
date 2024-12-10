@@ -80,10 +80,23 @@ function closeModals() {
 
 function initCarousel(id) {
     console.log(`Initializing carousel for ${id}`);
-    return new Flickity('#' + id, {
+    const carousel = new Flickity('#' + id, {
         imagesLoaded: true,
-        adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
+        adaptiveHeight: true // Adjust height based on cell content
     });
+
+    // Listen for the 'select' event to reset the GIF in the selected cell
+    carousel.on('select', function () {
+        const selectedElement = carousel.selectedElement;
+        const gif = selectedElement.querySelector('.gif-reset');
+        if (gif) {
+            let currentSrc = gif.src;
+            gif.src = ''; // Clear the source to reset the GIF
+            gif.src = currentSrc; // Reassign the source to restart the GIF
+        }
+    });
+
+    return carousel;
 }
 
 function getAll(selector) {
